@@ -17,4 +17,5 @@ uuid = {version = "1.2.2", features = [
 ]}
 serde_json = "*"
 serde = {version = "*", features = ["derive"]}
-
+futures = "0.3.17"
+axum-macros = "0.3.1"
