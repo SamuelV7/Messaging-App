@@ -63,7 +63,7 @@ fn ws_handler(mut socket : Websocket){
 
 
 async fn handler(ws: WebSocketUpgrade) -> impl IntoResponse{
-    ws.on_upgrade(move |socket| ws_handler)
+    ws.on_upgrade(move |socket| {ws_handler(socket)})
 }
 
 async fn read(receiver: SplitStream<Websocket>){
